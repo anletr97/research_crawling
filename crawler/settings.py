@@ -21,6 +21,9 @@ USER_AGENT = 'matmoong (http://www.matmoong.com)'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+#export with encoding
+FEED_EXPORT_ENCODING = 'utf-8'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 

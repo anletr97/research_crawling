@@ -13,7 +13,9 @@ class CrawlerSpider(Spider):
         item = ProductItem()
 
         item['pName'] = product.xpath('h1[@class="item-name"]/span/text()').extract_first()
-        item['pPrice'] = product.xpath('div[@class="item-price"]/text()').extract_first()
+        item['pPrice'] = product.css('span#span-price::text').get()
+
+        # item['pPrice'] = product.css('p#p-specialprice::text').get()
 
         yield item
         
