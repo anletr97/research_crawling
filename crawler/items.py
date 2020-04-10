@@ -18,4 +18,5 @@ class ProductItem(scrapy.Item):
     pPrice = scrapy.Field()
     pImage = scrapy.Field()
     pFeature = scrapy.Field()
+    pSeller = scrapy.Field()
     pass

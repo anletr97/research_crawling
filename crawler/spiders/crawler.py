@@ -11,11 +11,10 @@ class CrawlerSpider(Spider):
         product = Selector(res).css('div.product-summary')
         item = ProductItem()
 
-        # item['pName'] = product.xpath('//h1[@class="item-name"]/span/text()').extract_first()
         item['pName'] = product.css('h1.item-name').css('span::text').get()
         item['pPrice'] = product.css('span#span-price::text').get()
         item['pImage'] = product.css('img::attr(src)').extract_first()
         item['pFeature'] = product.css('div.top-feature-item').css('p::text').getall()
-
+        item['pSeller'] = product.css('div.text').css('span::text').get()
         yield item
         
