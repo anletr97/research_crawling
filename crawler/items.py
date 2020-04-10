@@ -16,4 +16,6 @@ class CrawlerItem(scrapy.Item):
 class ProductItem(scrapy.Item):
     pName = scrapy.Field()
     pPrice = scrapy.Field()
+    pImage = scrapy.Field()
+    
     pass
