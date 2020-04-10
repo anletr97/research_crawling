@@ -15,6 +15,7 @@ class CrawlerSpider(Spider):
         item['pName'] = product.css('h1.item-name').css('span::text').get()
         item['pPrice'] = product.css('span#span-price::text').get()
         item['pImage'] = product.css('img::attr(src)').extract_first()
+        item['pFeature'] = product.css('div.top-feature-item').css('p::text').getall()
 
         yield item
         
