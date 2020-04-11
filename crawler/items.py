@@ -16,6 +16,8 @@ class CrawlerItem(scrapy.Item):
 class ProductItem(scrapy.Item):
     pName = scrapy.Field()
     pPrice = scrapy.Field()
+    pDiscountPrice = scrapy.Field()
+    pCode = scrapy.Field()
     pImage = scrapy.Field()
     pFeature = scrapy.Field()
     pSeller = scrapy.Field()
